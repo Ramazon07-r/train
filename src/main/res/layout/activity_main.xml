@@ -1,0 +1,211 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/gradient_background">
+
+    <!-- Заголовок приложения -->
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Математическая Викторина"
+        android:textSize="36sp"
+        android:fontFamily="@font/cool_font"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Иконка -->
+    <ImageView
+        android:id="@+id/example_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/math_icon"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Поле с примером -->
+    <TextView
+        android:id="@+id/example_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пример: 5 + 3 = ?"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/cool_font"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Таймер -->
+    <TextView
+        android:id="@+id/timer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Осталось времени: 15 сек"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Уровень -->
+    <TextView
+        android:id="@+id/level_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уровень: 1"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Рекорд игрока -->
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Рекорд: 0"
+        android:layout_gravity="center"
+        android:textColor="#FFD700"
+        android:textSize="20sp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Кнопка "Начать игру" -->
+    <Button
+        android:id="@+id/start_game_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Начать игру"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/cool_font"
+        android:padding="16dp"
+        android:elevation="10dp"/>
+
+    <!-- Кнопки выбора сложности (по вертикали) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+
+        <Button
+            android:id="@+id/easy_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Легкий"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/cool_font"
+            android:elevation="10dp" />
+
+        <Button
+            android:id="@+id/medium_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Средний"
+            android:backgroundTint="#FFC107"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/cool_font"
+            android:elevation="10dp" />
+
+        <Button
+            android:id="@+id/hard_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сложный"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/cool_font"
+            android:elevation="10dp" />
+    </LinearLayout>
+
+    <!-- Кнопки вариантов ответа -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="32dp">
+
+        <Button
+            android:id="@+id/option1_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ответ 1"
+            android:backgroundTint="#FF6F61"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/cool_font"
+            android:elevation="8dp" />
+
+        <Button
+            android:id="@+id/option2_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ответ 2"
+            android:backgroundTint="#F9A825"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/cool_font"
+            android:elevation="8dp" />
+
+        <Button
+            android:id="@+id/option3_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ответ 3"
+            android:backgroundTint="#29B6F6"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/cool_font"
+            android:elevation="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

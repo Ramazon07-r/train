@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundColor">#F5F5F5</color> <!-- Светлый фон -->
+    <color name="primaryTextColor">#000000</color> <!-- Черный текст -->
+    <color name="secondaryTextColor">#757575</color> <!-- Серый текст -->
+    <color name="buttonBackground">#3F51B5</color> <!-- Синий фон кнопок -->
+    <color name="buttonTextColor">#FFFFFF</color> <!-- Белый текст на кнопках -->
+</resources>

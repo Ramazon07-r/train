@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="easy_button" type="id" />
+    <item name="medium_button" type="id" />
+    <item name="hard_button" type="id" />
+</resources>
